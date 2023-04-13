@@ -314,6 +314,13 @@ Window {
                 }
             }
             //highlightFollowsCurrentItem: true
+
+            preferredHighlightBegin: 0
+            //preferredHighlightEnd: 50
+            highlightRangeMode: ListView.StrictlyEnforceRange
+
+            // CHECKOUT DURATION STUFF AND THEN THE SCROLL WILL WORK WELL.
+
             onContentYChanged: {
                 //console.log("Category at ",emojilistView.contentY," is ",emojisModel.get(indexAt(x,contentY)).category_name);
 
@@ -324,11 +331,11 @@ Window {
             }
 
 
-            onCurrentIndexChanged: {
-                //positionViewAtIndex(currentIndex, ListView.Beginning);
-                var item = itemAtIndex(currentIndex)
-                contentY = item.y
-            }
+//            onCurrentIndexChanged: {
+//                //positionViewAtIndex(currentIndex, ListView.Beginning);
+//                var item = itemAtIndex(currentIndex)
+//                //contentY = item.y
+//            }
             //CHECKOUT HIGHLIGHT RANGE MODE
 
         }
