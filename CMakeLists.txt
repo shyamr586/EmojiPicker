@@ -15,7 +15,9 @@ qt_add_executable(appEmojiPicker
 qt_add_qml_module(appEmojiPicker
     URI EmojiPicker
     VERSION 1.0
-    QML_FILES Main.qml
+    QML_FILES
+        Main.qml
+        Model.qml
 )
 
 set_target_properties(appEmojiPicker PROPERTIES
@@ -28,7 +30,6 @@ set_target_properties(appEmojiPicker PROPERTIES
 
 set(RESOURCE_FILES
     "emojipicker.qrc"
-    "emojis/emoji_file.json"
 )
 
 
