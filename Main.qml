@@ -193,11 +193,6 @@ Window {
                 NumberAnimation {
                     duration: 200
                 }
-
-                ColorAnimation {
-                    to: "transparent"
-                    duration: 200
-                }
             }
 
             Rectangle {
@@ -317,13 +312,9 @@ Window {
                 hoverEnabled: true
                 onWheel: {
                     if (wheel.angleDelta.y > 0) {
-                        console.log("ListView is scrolling up");
-                        searchbarwrapper.visible = true;
-                        searchbarwrapper.height = 60;
+                        searchbarwrapper.state = "default"
                     } else if (wheel.angleDelta.y < 0) {
-                        console.log("ListView is scrolling down");
-                        searchbarwrapper.height = 0;
-                        searchbarwrapper.visible = false;
+                        searchbarwrapper.state = "hidden"
                     }
                     wheel.accepted = false
                 }
